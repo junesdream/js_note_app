@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sunshiney&family=Yatra+One&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Sunshiney', cursive;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    animation: rainbow 12s ease infinite;
+}
+
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+.heading{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 50px;
+    -webkit-animation: animatedBackground_b 5s linear infinite alternate;
+}
+
+@keyframes animatedBackground_b{
+    0% {color: #ff8b00}
+    10% {color: #e8ff00}
+    20% {color: #5dff00}
+    30% {color: #00ff2e}
+    40% {color: #00ffb9}
+    50% {color: #00b9ff}
+    60% {color: #002eff}
+    70% {color: #5d00ff}
+    80% {color: #e800ff}
+    90% {color: #ff008b}
+    100% {color: #ff0000}
+}
+
+.info-text{
+    text-align: center;
+    font-size: 25px;
+} 
+/* Mit dem gird-template, um Notizen anzuordnen: die Spaltenbreite passt sich automatisch an die Containerbreite an */
+.app{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 40px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.note{
+    padding: 17px;
+    height: 200px;
+    background-color: rgba(237, 246, 123,.1);
+    opacity: 0.6; 
+    resize: none;
+    font-family: 'Yatra One', cursive;
+    font-size: 18px;
+    border-radius: 20px;
+    border: double 4px transparent;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00,#3020ff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 20px 4px 8px rgba(0, 255, 255, 0.7);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.note::placeholder{
+    color: gray;
+    opacity: 300%;
+}
+
+.note:hover, 
+.note:focus{
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    transition: all 300ms ease;
+} 
+
+.btn{
+    height: 200px;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 0.6; 
+    border-radius: 20px;
+    font-size: 70px;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+} 
+
+.btn:hover{
+    background: rgba(255,255,255,0.7);
+    color: rgba(0,0,0,0.6);
+    transition: all 300ms ease;
+    border: 2px ridge #191a19;
+}
